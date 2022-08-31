@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     devise_scope :user do
       post '/auth/sign_in', to: 'users/sessions#create'
     end
+    post 'window', to: 'window#create', as: 'create_window'
   end
 end
